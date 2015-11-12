@@ -128,7 +128,8 @@ Please check out the [deploying hubot onto UNIX][deploy-unix] and
 [deploy-windows]: https://github.com/github/hubot/blob/master/docs/deploying/unix.md
 
 ## Running hubot-slack-aws
-3 environment variables need to be exported before running [bin/hubot --adapter slack].
+3 environment variables need to be exported before running [bin/hubot --adapter slack]
+
 `HUBOT_SLACK_TOKEN=''`
 `AWS_ACCESS_KEY_ID=''`
 `AWS_SECRET_ACCESS_KEY=''`
