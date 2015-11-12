@@ -33,6 +33,13 @@ Then you can interact with slack-hubot by typing `slack-hubot help`.
     help - Displays all of the help commands that Hubot knows about.
     ...
 
+### To run the hubot-slack-aws 
+3 environment variables need to be exported before running [bin/hubot --adapter slack]
+
+`HUBOT_SLACK_TOKEN=''`
+`AWS_ACCESS_KEY_ID=''`
+`AWS_SECRET_ACCESS_KEY=''`
+
 
 ### Scripting
 
@@ -127,10 +134,4 @@ Please check out the [deploying hubot onto UNIX][deploy-unix] and
 [deploy-unix]: https://github.com/github/hubot/blob/master/docs/deploying/unix.md
 [deploy-windows]: https://github.com/github/hubot/blob/master/docs/deploying/unix.md
 
-## Running hubot-slack-aws
-3 environment variables need to be exported before running [bin/hubot --adapter slack]
-
-`HUBOT_SLACK_TOKEN=''`
-`AWS_ACCESS_KEY_ID=''`
-`AWS_SECRET_ACCESS_KEY=''`
 
