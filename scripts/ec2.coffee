@@ -1,7 +1,7 @@
 #Script to get aws asg ec2 active hosts
 child_process = require('child_process')
 module.exports = (robot) ->
-	cmd="/home/ashley/hubot/scripts/ec2.sh"
+	cmd="/hubot/scripts/ec2.sh"
 
 	robot.hear /ec2 (.+)\s(.+)/i, (msg) ->
 	   role = msg.match[1]
