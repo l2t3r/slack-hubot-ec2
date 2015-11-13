@@ -71,20 +71,6 @@ Hubot is able to load scripts from third-party `npm` package. Check the package'
 
 You can review `external-scripts.json` to see what is included by default.
 
-##  Persistence
-
-If you are going to use the `hubot-redis-brain` package
-(strongly suggested), you will need to add the Redis to Go addon on Heroku which requires a verified
-account or you can create an account at [Redis to Go][redistogo] and manually
-set the `REDISTOGO_URL` variable.
-
-    % heroku config:add REDISTOGO_URL="..."
-
-If you don't require any persistence feel free to remove the
-`hubot-redis-brain` from `external-scripts.json` and you don't need to worry
-about redis at all.
-
-[redistogo]: https://redistogo.com/
 
 ## Adapters
 
@@ -110,8 +96,7 @@ Where `<adapter>` is the name of your adapter without the `hubot-` prefix.
 Please check out the [deploying hubot onto UNIX][deploy-unix]. 
 
 [heroku-node-docs]: http://devcenter.heroku.com/articles/node-js
-[deploy-heroku]: https://github.com/github/hubot/blob/master/docs/deploying/heroku.md
 [deploy-unix]: https://github.com/github/hubot/blob/master/docs/deploying/unix.md
-[deploy-windows]: https://github.com/github/hubot/blob/master/docs/deploying/unix.md
+
 
 
