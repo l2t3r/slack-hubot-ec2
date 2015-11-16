@@ -14,7 +14,8 @@ module.exports = (robot) ->
    when "web-prod"
     LOGENTRIES_URL+= "#{PROD_ACCOUNT_ID}/hosts/SF360-Web-Production/CatalinaLog/?start=#{START}&limit=#{LIMIT}"
    else
-    msg.send("Not yet implemented!")
+    msg.send("Not yet implemented mate! Have a break")
+    process.exit() 
 
   msg.http("#{LOGENTRIES_URL}")
    .get() (err, res, body) ->
