@@ -1,7 +1,7 @@
 moment = require('moment-timezone')
 module.exports = (robot) ->
  
- robot.hear  /ci\s(.+)\s(.+)/i, (msg) ->
+ robot.hear  /ci\s([A-Za-z]+)\s([A-Za-z]+)/i, (msg) ->
   jenkins_url = process.env.JENKINS_URL 
   job = msg.match[1].replace /^\s+|\s+$/g, ""
   env = msg.match[2].replace /^\s+|\s+$/g, ""
