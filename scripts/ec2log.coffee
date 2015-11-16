@@ -7,7 +7,7 @@ module.exports = (robot) ->
   log = msg.match[1].replace /^\s+|\s+$/g, ""
   LOGENTRIES_URL = "https://pull.logentries.com/"
   date = new Date()
-  START = moment(date).subtract(10, 'seconds').valueOf()
+  START = moment(date).subtract(60, 'seconds').valueOf()
   switch log
    when "web-test"
     LOGENTRIES_URL+= "#{TEST_ACCOUNT_ID}/hosts/SF360-Web-Test/CatalinaLog/?start=#{START}&limit=#{LIMIT}"
