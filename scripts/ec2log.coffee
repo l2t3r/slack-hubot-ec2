@@ -1,5 +1,4 @@
 moment = require('moment-timezone')
-TEST_ACCOUNT_ID = process.env.TEST_ACCOUNT_ID
 PROD_ACCOUNT_ID = process.env.PROD_ACCOUNT_ID
 LIMIT = 50
 module.exports = (robot) ->
@@ -9,11 +8,10 @@ module.exports = (robot) ->
   date = new Date()
   START = moment(date).subtract(60, 'seconds').valueOf()
   switch log
-   when "web-test"
-    LOGENTRIES_URL+= "#{TEST_ACCOUNT_ID}/hosts/SF360-Web-Test/CatalinaLog/?start=#{START}&limit=#{LIMIT}"
    when "web-prod"
     LOGENTRIES_URL+= "#{PROD_ACCOUNT_ID}/hosts/SF360-Web-Production/CatalinaLog/?start=#{START}&limit=#{LIMIT}"
    else
+    msg.send "Only [ ec2log web-prod ] allowed"
     return
    
   msg.http("#{LOGENTRIES_URL}")
