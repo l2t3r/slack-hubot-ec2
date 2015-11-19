@@ -32,6 +32,11 @@ module.exports = (robot) ->
     data = JSON.parse(body)
     date = new Date(data.timestamp)
     AU = moment(date).tz("Australia/Sydney").format('MMMM Do YYYY, h:mm:ss a')
-    BRANCH = data.actions[0].parameters[5].value
-    msg.reply "Current Branch deployed for #{job.toUpperCase()} in #{env.toUpperCase()} is #{BRANCH.toUpperCase()}, Artifact Number is #{data.actions[0].parameters[6].value} at #{AU}"
+    if job == "web"
+     BRANCH = data.actions[0].parameters[6].value
+     AN = data.actions[0].parameters[7].value
+    else
+     BRANCH = data.actions[0].parameters[5].value
+     AN = data.actions[0].parameters[6].value   
+    msg.reply "Current Branch deployed for #{job.toUpperCase()} in #{env.toUpperCase()} is #{BRANCH.toUpperCase()}, Artifact Number is #{AN} at #{AU}"
 
